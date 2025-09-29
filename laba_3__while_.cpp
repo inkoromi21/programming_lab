@@ -10,6 +10,7 @@ using namespace std;
 
 int main() {
   double R, E, P, r;
+  int R_step = 10.0;
   
   cout << "E = ";
   cin  >> E;
@@ -22,24 +23,26 @@ int main() {
 
   cout << fixed << setprecision(2) << "\t \t" << endl;
     
-  while(R < 50.0) {
+  while (R < 50.0) {
     P = R * (E / (R + r)) * (E / (R + r));
 
     cout << "R = " << R << "\t \t" << P << endl;
       
     // увеличение сопротивления до 50 Ом с шагом 10 Ом.
-    R = R + 10.0 ;
+    R = R + R_step;
     
   }
 
   do {
+    R_step = 50.0;
+    
     P = R * (E / (R + r)) * (E / (R + r));
   
     cout << "R = " << R << "\t \t" << P << endl;
       
     // увеличение сопротивления до 350 Ом с шагом 50 Ом.
-    R = R + 50.0;
-  } while(R < 350.0);
+    R = R + R_step;
+  } while (R < 350.0);
   
   return 0;
 }
