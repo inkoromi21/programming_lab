@@ -4,13 +4,12 @@
 *************************/
 
 #include <iostream>
-#include <cmath>
 #include <iomanip>
+
 using namespace std;
 
-int main () {
-  int R, E;
-  double P, r;
+int main() {
+  double R, E, P, r;
   
   cout << "E = ";
   cin  >> E;
@@ -28,7 +27,7 @@ int main () {
 
     cout << "R = " << R << "\t \t" << P << endl;
       
-    // увеличение сопротивления до 50 Ом.
+    // увеличение сопротивления до 50 Ом с шагом 10 Ом.
     R = R + 10.0 ;
     
   }
@@ -38,7 +37,7 @@ int main () {
   
     cout << "R = " << R << "\t \t" << P << endl;
       
-    // увеличение сопротивления до 350 Ом.
+    // увеличение сопротивления до 350 Ом с шагом 50 Ом.
     R = R + 50.0;
   } while(R < 350.0);
   
