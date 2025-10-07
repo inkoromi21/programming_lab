@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
   double A, d, R, n, j;
-  int endOfRepeatValue, numberOfDecimalPlaces;
+  int endLoopValue, decimalPlaces;
     
   cout << "d = ";
   cin  >> d;
@@ -21,12 +21,12 @@ int main() {
 
   d = d / 10.0;
   
-  endOfRepeatValue = 7;
-  numberOfDecimalPlaces = 4;
+  endLoopValue = 7;
+  decimalPlaces = 4;
   
-  cout << fixed << setprecision(numberOfDecimalPlaces) << "\t \t" << endl;
+  cout << fixed << setprecision(decimalPlaces) << "\t \t" << endl;
     
-  for (int numberOfRepetitions = 0; numberOfRepetitions < endOfRepeatValue; ++numberOfRepetitions) {
+  for (int loopCounter = 0; loopCounter < endLoopValue; ++loopCounter) {
     cout << "j = ";
     cin  >> j;
     
@@ -40,7 +40,7 @@ int main() {
     }
     
     cout << "R = " << R << "    " << "A = " << A << endl << " " << endl;
-    }
-  return 0;
+  }
+  return 0
 }
     
