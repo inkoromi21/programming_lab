@@ -34,14 +34,14 @@ int main() {
     if (is_letter(ch)) {
       ch = to_lower(ch);
             
-      repetitions[ch]++;
+      ++repetitions[ch];
             
     if (prev_char != '\0') {
         
       pair += prev_char;
       pair += ch;
         
-      pairRepetitions[pair]++;
+      ++pairRepetitions[pair];
     }
         
     prev_char = ch;
